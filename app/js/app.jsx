@@ -1,3 +1,6 @@
+import ScrollAnim from 'rc-scroll-anim';
+var ScrollOverPack = ScrollAnim.OverPack;
+var Element = ScrollAnim.Element;
 import React from 'react';
 import ReactDom from 'react-dom';
 //Material Imports
@@ -28,14 +31,28 @@ class Resume extends React.Component{
         return (
             <MuiThemeProvider>
                 <div>
-                    <SidebarMenuLeft/>
                     <div id="container">
-                        <Header/>
-                        <About/>
-                        <Experience/>
-                        <Skills/>
-                        <Services/>
-                        <Contact/>
+                        <ScrollOverPack>
+                            <SidebarMenuLeft/>
+                            <Element scrollName="header">
+                                <Header scrollName="header"/>
+                            </Element>
+                            <Element scrollName="about">
+                                <About/>
+                            </Element>
+                            <Element scrollName="experience">
+                                <Experience scrollName="experience"/>
+                            </Element>
+                            <Element scrollName="skills">
+                                <Skills scrollName="skills"/>
+                            </Element>
+                            <Element scrollName="services">
+                                <Services scrollName="services"/>
+                            </Element>
+                            <Element scrollName="contact">
+                                <Contact scrollName="contact"/>
+                            </Element>
+                        </ScrollOverPack>
                     </div>
                 </div>
             </MuiThemeProvider>
