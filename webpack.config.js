@@ -8,7 +8,7 @@ module.exports = {
         html: './index.html'
     },
     output: {
-        path: path.join(__dirname, 'app'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     module: {
